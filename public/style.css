@@ -19,12 +19,13 @@ header h1 {
 .container-section {
     width: 100%;
     height: calc(100vh - 60px);
-    background-color: #ffffff;
-    border: solid 1px grey;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+}
+#displayVacio {
+    background-color: #ffffff;
 }
 #displayVacio h2 {
     text-align: center;
@@ -57,6 +58,10 @@ header h1 {
     font-family:'Source Code Pro', monospace ;
     font-size: 18px;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 .mb-3 {
     display: flex;
@@ -86,6 +91,7 @@ textarea {
     width: 100%;
     font-family: 'source code pro', monospace;
     font-size: 30px;
+    list-style: none;
 }
 .list-group li {
     display: flex;
@@ -94,6 +100,10 @@ textarea {
 .list-group li img {
     width: 45px;
     height: 45px;
+}
+.list-group-item button {
+    background: none;
+    border: none;
 }
 .detalleCompra {
     display: flex;
@@ -112,8 +122,13 @@ textarea {
 .detalleCompra h1 {
     margin-top: 20px;
     margin-bottom: 20px;
+    font-size: 30px;
 }
-#buttonCerrar {
+.detalleCompra p {
+    font-size: 25px;
+    text-align: center;
+}
+.btn-cerrar {
     border-radius: 100px;
     border: none;
     background-color: transparent;
@@ -121,11 +136,12 @@ textarea {
     top: 70px;
     right: 15px;
 }
-#buttonCerrar img {
+.btn-cerrar img {
     width: 40px;
     height: 40px;
 }
-#displayListado, #displayDetalle, #displayFormulario {
+
+#displayFormulario, #displayDetalle, #displayListado {
     display: none;
 }
  /* #71DFE7 #C2FFF9 */
