@@ -22,6 +22,9 @@ let detalleImg = document.getElementById('detalleImg')
 let detalleTitulo = document.getElementById('detalleTitulo')
 let detalleDescripcion = document.getElementById('detalleDescripcion')
 
+// Local Storage
+let listadoStorage = []
+
 /* funciones */
 let agregame = ()=> {
     displayVacio.style.display = 'none'
@@ -63,6 +66,9 @@ addButton.addEventListener('click', () => {
     }else{
         alert('Completa los datos campos requeridos')
     }
+    listadoStorage.push(modelo)
+    localStorage.setItem('listaCompras', listadoStorage.join(' '))
+    //join elimina el bug de la coma en array de listado
 })
 
 btnCerrar.addEventListener('click', ()=> {
@@ -74,3 +80,11 @@ btnCerrarFormulario.addEventListener('click', ()=> {
     displayFormulario.style.display = 'none'
     displayListado.style.display = 'block'
 })
+
+//Local Storage
+let desdeStorage = localStorage.getItem('listaCompras')
+ if(desdeStorage){
+    displayVacio.style.display = 'none'
+    displayListado.style.display = 'block'
+    listado.innerHTML += desdeStorage
+ }
