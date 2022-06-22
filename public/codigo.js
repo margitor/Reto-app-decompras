@@ -9,6 +9,7 @@ let agregarProductoListado = document.getElementById('agregarProductoListado')
 let addButton = document.getElementById('addButton')
 let btnCerrar = document.getElementById('btnCerrar')
 let btnCerrarFormulario = document.getElementById('btnCerrarFormulario')
+let btnEliminar = document.getElementById('btnEliminar')
 
 /* referencia formularios*/
 let formTitulo = document.getElementById('formTitulo')
@@ -77,8 +78,9 @@ btnCerrar.addEventListener('click', ()=> {
 })
 
 btnCerrarFormulario.addEventListener('click', ()=> {
-    displayFormulario.style.display = 'none'
-    displayListado.style.display = 'block'
+        displayFormulario.style.display ='none'
+        displayListado.style.display ='block'
+        displayVacio.style.display ='none'
 })
 
 //Local Storage
@@ -88,3 +90,11 @@ let desdeStorage = localStorage.getItem('listaCompras')
     displayListado.style.display = 'block'
     listado.innerHTML += desdeStorage
  }
+btnEliminar.addEventListener('click', ()=> {
+   if(desdeStorage) {
+    localStorage.removeItem('listaCompras')
+    displayVacio.style.display = 'block'
+    displayListado.style.display = 'none'
+   }
+}
+)

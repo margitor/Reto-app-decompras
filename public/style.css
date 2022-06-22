@@ -47,8 +47,8 @@ header h1 {
     border: none;
     border-radius: 100px;
     position: absolute;
-    bottom: 30px;
-    right: 30px;
+    bottom: 45px;
+    right: 20px;
     background-image: url(images/add.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -105,6 +105,30 @@ textarea {
     background: none;
     border: none;
 }
+.btn-eliminar {
+    background-image: url(images/delete2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 5px;
+    right: 37px;
+    width: 35px;
+    height: 35px;
+
+}
+.btn-eliminar img {
+    width: 35px;
+    height: 35px;
+}
+.container-btn-eliminar {
+    width: 100%;
+    height: 40px ;
+    display: flex;
+    justify-content: center;
+}
+
 .detalleCompra {
     display: flex;
     flex-direction: column;
@@ -114,6 +138,7 @@ textarea {
     padding: 50px;
     background-color: #C2FFF9 ;
     border-radius: 10px;
+    justify-content: space-around;
 }
 .detalleCompra img {
     width: 90px;
@@ -140,6 +165,7 @@ textarea {
     width: 40px;
     height: 40px;
 }
+
 
 #displayFormulario, #displayDetalle, #displayListado {
     display: none;
